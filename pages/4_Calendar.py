@@ -190,7 +190,7 @@ state = calendar(
 if state.get("eventsSet") is not None:
     st.session_state["events"] = state["eventsSet"]
 
-st.write(state)
+#st.write(state)
 
-st.markdown("## API reference")
+#st.markdown("## API reference")
 st.help(calendar)
