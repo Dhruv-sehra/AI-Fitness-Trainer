@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+.venv-1/
+
+
+
+# Environment variables
+.env
+
+# Docker / setup / generated files
+Dockerfile
+setup.sh
+hashed.pkl
+tmp_import_result.json
+
+# IDE files
+.vscode/
+.streamlit/
