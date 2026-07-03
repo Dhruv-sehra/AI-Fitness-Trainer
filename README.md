@@ -1,312 +1,385 @@
-# 🏋️ AI Fitness Trainer
+<p align="center">
+  <img src="cover.png" alt="AI Fitness Trainer Banner" width="50%">
+</p>
+
+<h1 align="center">
+🏋️ AI Fitness Trainer
+</h1>
 
 <p align="center">
-  <img src="cover.png" alt="AI Fitness Trainer Banner" width="100%">
+An AI-powered personal fitness coach that delivers <b>real-time exercise tracking</b>, <b>pose estimation</b>, <b>form correction</b>, and <b>personalized workout recommendations</b> using Computer Vision and Large Language Models.
 </p>
 
 <p align="center">
-
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-FF4B4B?style=for-the-badge\&logo=streamlit\&logoColor=white)
-![MediaPipe](https://img.shields.io/badge/MediaPipe-Pose_Detection-0F9D58?style=for-the-badge)
-![OpenCV](https://img.shields.io/badge/OpenCV-Computer_Vision-5C3EE8?style=for-the-badge\&logo=opencv\&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-LLM_Framework-1C3C3C?style=for-the-badge)
-![Groq](https://img.shields.io/badge/Groq-LLM_API-F55036?style=for-the-badge)
-
-</p>
-
-<p align="center">
-An AI-powered virtual fitness coach that performs <strong>real-time pose estimation</strong>, <strong>exercise repetition counting</strong>, <strong>form correction</strong>, and <strong>personalized workout planning</strong> using Computer Vision and Large Language Models.
+  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit" />
+  <img src="https://img.shields.io/badge/MediaPipe-Pose-blue?style=for-the-badge" alt="MediaPipe" />
+  <img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge" alt="OpenCV" />
+  <img src="https://img.shields.io/badge/Groq-LLM-orange?style=for-the-badge" alt="Groq" />
+  <img src="https://img.shields.io/badge/LangChain-AI-success?style=for-the-badge" alt="LangChain" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License" />
 </p>
 
 ---
 
-## 📌 Overview
+## 🚀 Overview
 
-AI Fitness Trainer is an intelligent fitness assistant built with **MediaPipe**, **OpenCV**, **Streamlit**, **LangChain**, and **Groq LLM**.
+AI Fitness Trainer is an intelligent virtual workout assistant that combines **Computer Vision**, **Pose Estimation**, and **Generative AI** to help users perform exercises with proper form.
 
-The application analyzes a user's body posture through a webcam, detects exercise movements in real time, counts repetitions, provides instant posture correction, and generates personalized workout plans based on the user's fitness profile.
+Using a webcam, the application detects body landmarks in real time, counts repetitions, analyzes posture, provides instant corrective feedback, and even generates personalized workout plans based on individual fitness goals.
 
-Unlike traditional workout trackers, the system combines **Computer Vision** with **Generative AI** to deliver an interactive and personalized fitness experience.
+Unlike traditional fitness trackers, this project functions as an interactive AI coach capable of monitoring exercise performance while recommending customized training routines.
 
 ---
 
 ## ✨ Key Highlights
 
-* 🎯 Real-time human pose estimation using MediaPipe
-* 💪 AI-powered exercise repetition counting
-* ✅ Live posture and form correction
-* 🤖 Personalized workout recommendations using Groq LLM
-* 📅 Built-in workout calendar and scheduling
-* 🔐 Secure user authentication
-* 📹 Webcam-based exercise tracking
-* ⚡ Fast and lightweight Streamlit interface
-* 🧠 Modular architecture for adding new exercises easily
+✅ Real-time AI Pose Detection
+
+✅ Automatic Rep Counter
+
+✅ Live Form Correction
+
+✅ Personalized AI Workout Recommendations
+
+✅ Interactive Workout Calendar
+
+✅ Secure User Authentication
+
+✅ Multiple Exercise Trainers
+
+✅ Modern Streamlit Dashboard
 
 ---
 
-# 🎥 Demo
+## 🎯 Supported Exercises
 
-> **Live Demo:** *Coming Soon*
-
-### Supported Exercises
-
-* 💪 Bicep Curl
-* 🦵 Squat
-* 🔥 Tricep Kickback
-* 🚶 Lunges
-* 🪽 Dumbbell Fly
+- 💪 Bicep Curl
+- 🏋️ Squats
+- 🔥 Tricep Kickback
+- 🚶 Lunges
+- 🪽 Dumbbell Fly
 
 ---
 
-# 📷 Screenshots
+## 📸 Preview
 
-| Homepage         | Exercise Detection |
-| ---------------- | ------------------ |
-| <img src="cover.png" alt="AI Fitness Trainer Banner" width="50%"> | <img src="cover.png" alt="AI Fitness Trainer Banner" width="50%">  |
+> Replace these screenshots with your own images.
 
-| AI Workout Recommendation | Workout Calendar |
-| ------------------------- | ---------------- |
-| *Add Screenshot*          | *Add Screenshot* |
+| Home | AI Trainer |
+|------|------------|
+| ![](assets/homepage.png) | ![](assets/bicep.png) |
+
+| Recommendation | Calendar |
+|------|------------|
+| ![](assets/recommendation.png) | ![](assets/calendar.png) |
 
 ---
 
-## 🌟 Why This Project?
+## 🎥 Demo
 
-This project demonstrates the integration of multiple AI technologies into a single end-to-end application.
+> Coming Soon
 
-It combines:
+(Add your Streamlit deployment or demo video here.)
 
-* Computer Vision
-* Human Pose Estimation
-* Real-time Video Processing
-* AI-powered Workout Generation
-* Interactive Web Application Development
-
-The architecture is designed to be scalable, making it easy to integrate additional exercises, advanced pose analytics, and future AI fitness features.
 
 
 ---
 
-# 🚀 Features
+<h1 align="center">✨ Features</h1>
 
-### 🎯 AI-Powered Pose Estimation
+<table>
+<tr>
+<td width="50%">
 
-* Detects full-body posture in real time using **MediaPipe Pose**.
-* Tracks body landmarks continuously through the webcam.
-* Processes live video frames with minimal latency.
+### 🎥 Real-Time Pose Detection
+Track body movements using **MediaPipe Pose Estimation** with real-time landmark detection for accurate exercise monitoring.
 
-### 💪 Exercise Detection & Rep Counting
+</td>
 
-Supports multiple strength training exercises:
+<td width="50%">
 
-* Bicep Curl
-* Squat
-* Lunges
-* Tricep Kickback
-* Dumbbell Fly
+### 🔢 Intelligent Rep Counter
+Automatically counts repetitions by analyzing joint angles and movement states without any wearable devices.
 
-The system automatically detects movement phases and accurately counts valid repetitions.
+</td>
+</tr>
 
----
+<tr>
+<td>
 
-### ✅ Real-Time Form Correction
+### ✅ Live Form Correction
+Provides instant posture feedback to help users maintain correct form and reduce the risk of injuries.
 
-The application continuously evaluates posture and movement quality by analyzing joint angles.
+</td>
 
-It provides instant feedback for incorrect form, helping users perform exercises safely and effectively.
+<td>
 
-Examples include:
+### 🤖 AI Workout Planner
+Generates personalized workout routines based on fitness goals, experience level, body metrics, and training frequency using **Groq LLM + LangChain**.
 
-* Straighten your back
-* Move your arm forward
-* Move your arm backward
-* Face the camera correctly
+</td>
+</tr>
 
----
-
-### 🧠 AI Workout Recommendation
-
-Users enter their:
-
-* Height
-* Weight
-* Fitness Goal
-* Experience Level
-* Weekly Workout Frequency
-
-Using **LangChain** and **Groq LLM**, the application generates a personalized weekly workout plan tailored to the user's fitness profile.
-
----
+<tr>
+<td>
 
 ### 📅 Workout Calendar
+Visualize and organize AI-generated workout schedules with an interactive calendar.
 
-Generated workout plans are automatically organized into an interactive calendar, allowing users to:
+</td>
 
-* View scheduled workouts
-* Track weekly exercise plans
-* Navigate daily and weekly sessions
+<td>
 
----
+### 🔐 User Authentication
+Secure login system to provide a personalized fitness experience.
 
-### 🔐 Secure Authentication
+</td>
+</tr>
 
-* User login authentication
-* Encrypted password storage
-* Session management using Streamlit
+<tr>
+<td>
 
----
+### 📈 Performance Tracking
+Track correct reps, incorrect reps, and receive continuous real-time feedback during workouts.
 
-### ⚡ Modular Architecture
+</td>
 
-The project follows a modular design where each exercise has:
+<td>
 
-* Independent processing pipeline
-* Dedicated threshold configuration
-* Separate pose analysis logic
+### 🌐 Streamlit Dashboard
+Modern and responsive web interface built with Streamlit for a seamless user experience.
 
-This architecture makes adding new exercises simple and scalable.
-
----
-
-# 🛠️ Tech Stack
-
-| Category            | Technologies                  |
-| ------------------- | ----------------------------- |
-| **Language**        | Python                        |
-| **Frontend**        | Streamlit                     |
-| **Computer Vision** | OpenCV, MediaPipe             |
-| **AI / LLM**        | LangChain, Groq Llama 3.3 70B |
-| **Video Streaming** | Streamlit WebRTC              |
-| **Authentication**  | Streamlit Authenticator       |
-| **Scheduling**      | Streamlit Calendar            |
-| **Data Processing** | NumPy, Pandas                 |
-| **Environment**     | Python Dotenv                 |
-| **Deployment**      | Docker                        |
+</td>
+</tr>
+</table>
 
 ---
 
-# 🏗️ System Architecture
+# 🧠 AI Workflow
 
 ```text
-                    Webcam
-                       │
-                       ▼
-             MediaPipe Pose Detection
-                       │
-                       ▼
-            Body Landmark Extraction
-                       │
-                       ▼
-          Joint Angle Computation
-                       │
-                       ▼
-        Exercise State Classification
-                       │
-                       ▼
-     Rep Counting & Form Validation
-              │                 │
-              │                 │
-              ▼                 ▼
-      Live Feedback        Exercise Counter
-              │
-              ▼
-         Streamlit Dashboard
 
+                User Starts Workout
+                        │
+                        ▼
+              Webcam Video Stream
+                        │
+                        ▼
+            MediaPipe Pose Detection
+             (33 Body Landmarks)
+                        │
+                        ▼
+            Joint Angle Calculation
+                        │
+                        ▼
+          Exercise State Classification
+           (Normal → Transition → Pass)
+                        │
+                        ▼
+        Correct / Incorrect Rep Counting
+                        │
+                        ▼
+         Real-Time Form Correction
+                        │
+                        ▼
+      Live Feedback on Streamlit Dashboard
 
-      ──────────────────────────────
-
-      User Fitness Information
-                 │
-                 ▼
-          LangChain Prompt
-                 │
-                 ▼
-          Groq LLM Generation
-                 │
-                 ▼
-     Personalized Workout Plan
-                 │
-                 ▼
-       Interactive Calendar
 ```
+
+---
+
+## 🏗️ System Architecture
+
+```mermaid
+flowchart TB
+
+    %% User Layer
+    U([👤 User])
+
+    %% Frontend
+    subgraph Frontend["🎨 Frontend"]
+        UI["🏋️ Streamlit Web Application"]
+        AUTH["🔐 Authentication"]
+        CAL["📅 Workout Calendar"]
+    end
+
+    %% AI Trainers
+    subgraph Trainers["🤖 AI Exercise Trainers"]
+        CURL["💪 Bicep Curl"]
+        SQ["🏋️ Squat"]
+        TRI["🔥 Tricep Kickback"]
+        LUN["🚶 Lunges"]
+        FLY["🪽 Dumbbell Fly"]
+    end
+
+    %% Computer Vision
+    subgraph CV["🧠 Computer Vision Engine"]
+        CAM["📷 Webcam Stream"]
+        MP["MediaPipe Pose Detection<br/>33 Body Landmarks"]
+        ANG["📐 Joint Angle Calculation"]
+        STATE["🔄 State Machine"]
+        REP["🔢 Rep Counter"]
+        FEEDBACK["✅ Form Correction"]
+    end
+
+    %% AI Recommendation
+    subgraph AI["🤖 AI Recommendation Engine"]
+        INPUT["📝 User Fitness Details"]
+        LLM["Groq LLM"]
+        LC["LangChain"]
+        PLAN["📋 Personalized Workout Plan"]
+    end
+
+    %% Core
+    subgraph Core["⚙️ Core Components"]
+        UTILS["Utility Functions"]
+        THRESH["Exercise Thresholds"]
+    end
+
+    %% Connections
+
+    U --> UI
+
+    UI --> AUTH
+    UI --> CURL
+    UI --> SQ
+    UI --> TRI
+    UI --> LUN
+    UI --> FLY
+    UI --> INPUT
+    UI --> CAL
+
+    CURL --> CAM
+    SQ --> CAM
+    TRI --> CAM
+    LUN --> CAM
+    FLY --> CAM
+
+    CAM --> MP
+    MP --> ANG
+    ANG --> STATE
+    STATE --> REP
+    STATE --> FEEDBACK
+
+    ANG --> THRESH
+    STATE --> UTILS
+
+    INPUT --> LC
+    LC --> LLM
+    LLM --> PLAN
+    PLAN --> CAL
+
+    REP --> UI
+    FEEDBACK --> UI
+```
+
+---
+
+# 🏋️ Supported Exercises
+
+| Exercise | AI Tracking | Rep Counter | Form Feedback |
+|-----------|------------|-------------|---------------|
+| 💪 Bicep Curl | ✅ | ✅ | ✅ |
+| 🏋️ Squats | ✅ | ✅ | ✅ |
+| 🔥 Tricep Kickback | ✅ | ✅ | ✅ |
+| 🚶 Lunges | ✅ | ✅ | ✅ |
+| 🪽 Dumbbell Fly | ✅ | ✅ | ✅ |
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies | Purpose |
+|:---------|:-------------|:--------|
+| 💻 **Programming Language** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) | Core application development |
+| 🎨 **Frontend** | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white) | Interactive web interface |
+| 👁️ **Computer Vision** | ![MediaPipe](https://img.shields.io/badge/MediaPipe-4285F4?style=flat-square) <br> ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white) | Pose estimation & video processing |
+| 🤖 **Artificial Intelligence** | ![Groq](https://img.shields.io/badge/Groq-000000?style=flat-square) <br> ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square) | Personalized workout recommendations |
+| 📊 **Data Processing** | ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white) <br> ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white) | Numerical computation & data handling |
+| 🔐 **Authentication** | ![Streamlit Authenticator](https://img.shields.io/badge/Streamlit_Authenticator-FF4B4B?style=flat-square) | Secure user login |
+| 📅 **Scheduling** | ![Streamlit Calendar](https://img.shields.io/badge/Streamlit_Calendar-00B894?style=flat-square) | Workout scheduling |
+| 🐳 **Deployment** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) | Containerized deployment |
 
 ---
 
 # 📂 Project Structure
 
 ```bash
-AI-Fitness-Trainer/
+
+AI-Fitness-Trainer
 │
-├── assets/                         # Images and README assets
+├── assets/
+│   ├── cover.png
+│   ├── homepage.png
+│   ├── recommendation.png
+│   ├── calendar.png
 │
 ├── pages/
 │   ├── Bicep Curl AI Trainer.py
 │   ├── Squat AI Trainer.py
-│   ├── Lunges AI Trainer.py
 │   ├── Tricep KickBack.py
+│   ├── Lunges AI Trainer.py
 │   ├── Dumbbell Fly AI Trainer.py
 │   ├── Exercise Recommendation.py
 │   └── Calendar.py
 │
-├── Homepage.py                     # Main application
-├── Login.py                        # Authentication
-│
-├── process_frame_*.py              # Exercise processing pipelines
-├── threshold_*.py                  # Exercise threshold configurations
-├── utils.py                        # Pose utilities & angle calculations
-│
+├── Homepage.py
+├── Login.py
+├── utils.py
+├── process_frame_*.py
+├── threshold_*.py
 ├── requirements.txt
 ├── Dockerfile
 └── README.md
+
 ```
 
 ---
 
-# ⚙️ Core Functionalities
+# ⚡ Core Technologies
 
-* Real-time pose estimation
-* Joint angle computation
-* State-machine based repetition counting
-* Form correction feedback
-* Personalized AI workout generation
-* Workout scheduling
-* Secure authentication
-* Modular exercise processing pipeline
+| Technology | Purpose |
+|------------|---------|
+| **MediaPipe Pose** | Detects 33 body landmarks in real time |
+| **OpenCV** | Webcam processing and visualization |
+| **LangChain** | LLM orchestration |
+| **Groq API** | AI workout recommendation generation |
+| **Streamlit** | Interactive web application |
+| **Streamlit Calendar** | Workout schedule visualization |
+| **Streamlit Authenticator** | User authentication |
+| **Docker** | Containerized deployment |
 
 ---
 
+# 🚀 Getting Started
+
+Follow these steps to run **AI Fitness Trainer** locally.
+
+## 📋 Prerequisites
+
+Before you begin, make sure you have:
+
+| Requirement | Version |
+|-------------|---------|
+| Python | 3.10+ |
+| Git | Latest |
+| Webcam | Required |
+| Groq API Key | Required |
 
 ---
 
-# ⚙️ Installation
-
-## 1️⃣ Clone the Repository
+## 📥 Clone Repository
 
 ```bash
 git clone https://github.com/Dhruv-sehra/AI-Fitness-Trainer.git
+
 cd AI-Fitness-Trainer
-```
-
-## 2️⃣ Create a Virtual Environment
-
-**Windows**
-
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-**macOS / Linux**
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
 ```
 
 ---
 
-## 3️⃣ Install Dependencies
+## 📦 Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -314,105 +387,110 @@ pip install -r requirements.txt
 
 ---
 
-## 4️⃣ Configure Environment Variables
+## 🔑 Configure Environment
 
 Create a `.env` file in the project root.
 
 ```env
-GROQ_API_KEY=your_groq_api_key
+GROQ_API_KEY=your_api_key_here
 ```
 
 ---
 
-## 5️⃣ Run the Application
+## ▶️ Run the Application
 
 ```bash
 streamlit run Homepage.py
 ```
 
-The application will launch in your default browser.
-
 ---
 
-# 🚀 Usage
+## 🌐 Open in Browser
 
-### Step 1
-
-Launch the application and log in.
-
-### Step 2
-
-Choose an exercise trainer.
-
-### Step 3
-
-Allow webcam access.
-
-### Step 4
-
-Perform the exercise while maintaining proper posture.
-
-### Step 5
-
-Receive:
-
-* Live pose estimation
-* Automatic repetition counting
-* Real-time posture correction
-
-### Step 6
-
-Generate a personalized AI workout plan by entering your fitness profile.
-
-### Step 7
-
-Review your workout schedule in the integrated calendar.
-
----
-
-# 🎯 Exercise Detection Pipeline
-
-```text
-User Starts Exercise
-        │
-        ▼
- Webcam Captures Frames
-        │
-        ▼
- MediaPipe Pose Detection
-        │
-        ▼
- Body Landmark Extraction
-        │
-        ▼
- Joint Angle Calculation
-        │
-        ▼
- Exercise State Recognition
-        │
-        ▼
- Form Validation
-        │
-        ▼
- Rep Counter Update
-        │
-        ▼
- Live Feedback Display
+```
+http://localhost:8501
 ```
 
+Login using your configured credentials and start training.
+
 ---
 
-# 📈 Future Enhancements
+# 🎯 How It Works
 
-* 📱 Mobile-friendly interface
-* 🧠 AI nutrition and meal planning
-* 📊 Progress analytics dashboard
-* ❤️ Heart rate and wearable integration
-* ☁️ Cloud database for workout history
-* 🎙️ Voice-guided workout assistant
-* 🏋️ Additional exercise support
-* 📹 Workout history and session recording
-* 🌍 Multi-language support
+1️⃣ **Login**
+
+Authenticate securely to access your personalized fitness dashboard.
+
+↓
+
+2️⃣ **Choose an Exercise**
+
+Select from multiple AI-powered exercise trainers.
+
+↓
+
+3️⃣ **Start Your Webcam**
+
+The application captures live video and detects your body posture using MediaPipe.
+
+↓
+
+4️⃣ **Real-Time Analysis**
+
+Joint angles are continuously calculated to evaluate movement and exercise form.
+
+↓
+
+5️⃣ **Instant Feedback**
+
+Receive live posture corrections and automatic repetition counting.
+
+↓
+
+6️⃣ **AI Workout Planning**
+
+Generate personalized workout routines using Groq LLM and LangChain.
+
+↓
+
+7️⃣ **Track Your Progress**
+
+Visualize scheduled workouts through the integrated calendar.
+
+---
+
+# 🌟 Core Capabilities
+
+| Capability | Description |
+|------------|-------------|
+| 🎥 Pose Estimation | Detects 33 body landmarks in real time |
+| 📐 Angle Calculation | Computes joint angles for exercise evaluation |
+| 🔢 Rep Counting | Tracks correct repetitions automatically |
+| ✅ Form Correction | Provides instant posture feedback |
+| 🤖 AI Workout Planner | Generates personalized workout plans |
+| 📅 Workout Calendar | Organizes AI-generated schedules |
+| 🔐 Authentication | Secure user login |
+
+---
+
+# 🚀 Roadmap
+
+- [x] Real-time pose estimation
+- [x] AI workout recommendation
+- [x] Interactive workout calendar
+- [x] Authentication system
+- [x] Form correction
+- [x] Automatic repetition counting
+
+### Upcoming Features
+
+- [ ] Nutrition & meal planning
+- [ ] Progress analytics dashboard
+- [ ] Voice-based workout assistant
+- [ ] Exercise history
+- [ ] Cloud user profiles
+- [ ] Mobile-responsive UI
+- [ ] Additional AI exercise modules
 
 ---
 
@@ -420,15 +498,13 @@ User Starts Exercise
 
 Contributions are welcome!
 
-If you'd like to improve this project:
-
 1. Fork the repository.
-2. Create a new feature branch.
+2. Create your feature branch.
 3. Commit your changes.
-4. Push your branch.
+4. Push to your branch.
 5. Open a Pull Request.
 
-Please ensure your code follows the project's coding standards and includes clear documentation.
+If you discover bugs or have feature suggestions, feel free to open an issue.
 
 ---
 
@@ -436,7 +512,23 @@ Please ensure your code follows the project's coding standards and includes clea
 
 This project is licensed under the **MIT License**.
 
-See the `LICENSE` file for more information.
+Feel free to use, modify, and distribute this project in accordance with the license terms.
+
+See the [LICENSE](LICENSE) file for more information.
+
+---
+
+
+# 🙏 Acknowledgements
+
+Special thanks to these amazing open-source projects:
+
+- **MediaPipe** — Real-time pose estimation
+- **OpenCV** — Computer vision processing
+- **Streamlit** — Interactive web application framework
+- **LangChain** — LLM orchestration
+- **Groq** — High-speed inference for AI recommendations
+- **NumPy & Pandas** — Data processing
 
 ---
 
@@ -444,21 +536,24 @@ See the `LICENSE` file for more information.
 
 **Dhruv Sehra**
 
-AI & Machine Learning Developer
+AI & Machine Learning Engineer
 
-If you found this project helpful, consider giving it a ⭐ on GitHub.
+Passionate about Computer Vision, Generative AI, and Intelligent Automation.
+
+<p align="left">
+
+<a href="https://github.com/Dhruv-sehra">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github">
+</a>
+
+<a href="https://www.linkedin.com/in/Dhruvsehra/">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin">
+</a>
+
+<a href="mailto:Dhruvsehra.dev@gmail.com">
+<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail">
+</a>
+
+</p>
 
 ---
-
-## ⭐ Support
-
-If you like this project:
-
-* ⭐ Star the repository
-* 🍴 Fork the project
-* 🛠️ Contribute new features
-* 🐞 Report issues
-* 💡 Share suggestions
-
-Your support helps improve the project and motivates future development.
-
