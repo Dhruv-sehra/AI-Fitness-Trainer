@@ -38,17 +38,21 @@ goal = st.radio("Select your fitness goal:", ["Lose weight", "Bulk up", "Cut"], 
 experience = st.radio("Select your fitness experience:", ["Beginner", "Intermediate", "Advanced"], key = "experience")
 current_date = datetime.datetime.now().date()
 
-def change_format(response):
-    prompt = ChatPromptTemplate.from_template("""Currently, I am having this weekly plan for my workout: {plan}. I want you to transform it into 
-                                            this format: a list of dictionaries where each dictionaries includes: 
-                                                \"title\": \"Excercise name - Set x Reps x Weight\",
-                                                    \"color\": \"Color hexa code\" # Different pastel color for different focus of the excercise, same color for same focus
-                                                    \"start\": \"\" #which is which day excercise start,
-                                                    \"end\": \"\" # same day as start,
-                                                    \"resourceId\": \"a\" # a to f, randomize it for each excercise
-                                                    """)
+def change_format(response, start_date, days):
+    prompt = ChatPromptTemplate.from_template("""You are given a weekly workout plan in plain text:
+{plan}
+Convert it into a JSON array only. The output must be valid JSON, and contain no markdown, no code fences, and no extra text before or after the JSON.
+Each item in the array must be a JSON object with exactly these keys:
+  "title": "Exercise name - Set x Reps x Weight",
+  "color": "#RRGGBB",
+  "start": "YYYY-MM-DD",
+  "end": "YYYY-MM-DD",
+  "resourceId": "a"  # one of a, b, c, d, e, f
+Use the starting date {start_date} and fill {days} workout days across the week. Each workout event may start and end on the same date.
+Do not use any text formatting other than valid JSON. Do not use single quotes.
+""")
     chain = prompt | llm | output_parser
-    return chain.invoke({"plan":response})
+    return chain.invoke({"plan": response, "start_date": start_date, "days": days})
 
 
 def extract_json_text(text: str):
@@ -114,31 +118,41 @@ def parse_calendar_response(response):
         return None
 
 
+def validate_calendar_events(events):
+    if not isinstance(events, list):
+        return False
+    for item in events:
+        if not isinstance(item, dict):
+            return False
+        if not all(k in item for k in ["title", "color", "start", "end", "resourceId"]):
+            return False
+    return True
+
+
 # Function to interact with the chatbot
-def chat_with_bot(user_height,user_weight,user_days,goal):
+def chat_with_bot(user_height, user_weight, user_days, goal):
     prompt = ChatPromptTemplate.from_template("""My weight is {kg} kg, my height is {cm} cm, I want to go to the gym {days} days a week,
-                                                and I want my gym days to spread through out the week, and my goal is to {goal}. My experience with the gym is {experience}, 
-                                                and currently I can only do {pushup} in a row. Can you plan me a weekly workout routine, with detailed excercises (How many rep and set)
-                                                and recommended weight, and I want it to be in calendar view?. Starting from today, which is {date}, and I want to have format like this:
-                                              Monday - (main focus of excercises) - year/month/date: 
-                                              -list of excercises in the day """)
+                                                and I want my gym days to spread throughout the week, and my goal is to {goal}. My experience with the gym is {experience},
+                                                and currently I can only do {pushup} push-ups in a row. Can you plan me a weekly workout routine with detailed exercises (how many reps and sets)
+                                                and recommended weight? Use today as the starting date, which is {date}.""")
     chain = prompt | llm | output_parser
-    return chain.invoke({ "kg": user_weight, "cm": user_height, "days": user_days, "goal": goal, "experience": experience, "pushup": push_up, "date": current_date})
+    return chain.invoke({"kg": user_weight, "cm": user_height, "days": user_days, "goal": goal, "experience": experience, "pushup": push_up, "date": current_date})
+
 input_placeholder = st.empty()
 # Button to send the message
 if st.button("Submit"):
-    bot_respond = chat_with_bot(user_height,user_weight,user_days,goal)
-    saved_response = change_format(bot_respond)
+    bot_respond = chat_with_bot(user_height, user_weight, user_days, goal)
+    saved_response = change_format(bot_respond, str(current_date), user_days)
     parsed_response = parse_calendar_response(saved_response)
 
     st.write(bot_respond)
-    st.write("Calendar events:", parsed_response if parsed_response is not None else saved_response)
+    # st.write("Calendar events:", parsed_response if parsed_response is not None else saved_response)
 
-    if parsed_response is not None:
+    if parsed_response is not None and validate_calendar_events(parsed_response):
         st.session_state['transferred_variable'] = parsed_response
     else:
-        st.session_state['transferred_variable'] = saved_response
-        st.error("Could not parse the plan into calendar event data. Please check the response format.")
+        st.session_state['transferred_variable'] = None
+        st.error("Could not parse the plan into valid calendar event data. Please try again.")
     
     
 

@@ -192,5 +192,5 @@ if state.get("eventsSet") is not None:
 
 st.write(state)
 
-st.markdown("## API reference")
-st.help(calendar)
+# st.markdown("## API reference")
+# st.help(calendar)
