@@ -4,17 +4,6 @@ import sys
 import streamlit as st
 from streamlit_webrtc import VideoHTMLAttributes, webrtc_streamer
 from aiortc.contrib.media import MediaRecorder
-from Homepage import set_sidebar_visibility  
-
-BASE_DIR = os.path.abspath(os.path.join(__file__, '../../'))
-sys.path.append(BASE_DIR)
-import av
-import os
-import sys
-import streamlit as st
-from streamlit_webrtc import VideoHTMLAttributes, webrtc_streamer
-from aiortc.contrib.media import MediaRecorder
-
 
 BASE_DIR = os.path.abspath(os.path.join(__file__, '../../'))
 sys.path.append(BASE_DIR)
@@ -22,7 +11,7 @@ sys.path.append(BASE_DIR)
 
 from utils import get_mediapipe_pose
 from process_frame_squats import ProcessFrame
-from thresholds import get_thresholds_beginner
+from thresholds_squats import get_thresholds_beginner
 
 st.title('Squat AI Trainer')
 
@@ -88,8 +77,8 @@ if os.path.exists(output_video_file) and st.session_state['download']:
 
 
 
-from utils import get_mediapipe_pose
-from process_frame_squats import ProcessFrame
-from thresholds import get_thresholds_beginner, get_thresholds_pro
+# from utils import get_mediapipe_pose
+# from process_frame_squats import ProcessFrame
+# from thresholds import get_thresholds_beginner, get_thresholds_pro
 
-st.title('AI Squats correction')
+# st.title('AI Squats correction')

@@ -22,3 +22,4 @@ tmp_import_result.json
 # IDE files
 .vscode/
 .streamlit/
+output_live.flv

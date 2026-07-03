@@ -3,8 +3,7 @@ import os
 import sys
 import streamlit as st
 from streamlit_webrtc import VideoHTMLAttributes, webrtc_streamer
-from aiortc.contrib.media import MediaRecorder
-from Homepage import set_sidebar_visibility  
+from aiortc.contrib.media import MediaRecorder  
 
 BASE_DIR = os.path.abspath(os.path.join(__file__, '../../'))
 sys.path.append(BASE_DIR)
@@ -15,7 +14,7 @@ from process_frame_tricep_kickback import ProcessFrame
 from threshold_kickback import get_thresholds_beginner
 
 
-st.title('Bicep Curls Trainer')
+st.title('Tricep KickBack Trainer')
 
 
 thresholds = None 
@@ -51,7 +50,7 @@ ctx = webrtc_streamer(
                         key="Squats-pose-analysis",
                         video_frame_callback=video_frame_callback,
                         rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},  # Add this config
-                        media_stream_constraints={"video": {"width": {'min':480, 'ideal':480}}, "audio": True},
+                        media_stream_constraints={"video": {"width": {'min':480,'ideal':480}}, "audio": False},
                         video_html_attrs=VideoHTMLAttributes(autoPlay=True, controls=False, muted=False),
                         out_recorder_factory=out_recorder_factory
                     )

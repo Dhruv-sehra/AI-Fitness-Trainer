@@ -131,7 +131,7 @@ if authentication_status == True:
 
     # Logo 
     col1, col2, col3 = st.columns([0.25,1,0.25])
-    col2.image("Fitx.png", use_column_width=True)
+    col2.image("Fitx.png", width="stretch")
     new_line(2)
 
     # Description

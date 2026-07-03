@@ -1,5 +1,3 @@
-
-
 # Get thresholds for beginner mode
 def get_thresholds_beginner():
 
